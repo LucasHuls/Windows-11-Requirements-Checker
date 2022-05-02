@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net461</TargetFramework>
+    <RootNamespace>Windows_11_Compatibility_Checker_WPF</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Windows-11.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.0</Version>
+    <Authors>Lucas Huls</Authors>
+    <Copyright>Copyright © Lucas Huls</Copyright>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyName>Windows 11 Requirements Checker</AssemblyName>
+    <RepositoryUrl>https://github.com/LucasHuls/Windows-11-Requirements-Checker</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+</Project>

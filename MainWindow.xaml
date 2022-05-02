@@ -1,0 +1,59 @@
+﻿<Window x:Class="Windows_11_Compatibility_Checker_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Windows 11 Compatibility Checker" Width="704.557" Height="555.666666666667"
+    WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Height="526">
+        <StackPanel Margin="75,201,0,289" Orientation="Horizontal">
+            <Image x:Name="cpuArchitectureStatus" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" />
+            <Label x:Name="cpuArchitectureText" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="CPU Architecture: Checking" />
+        </StackPanel>
+        <StackPanel Margin="75,169,0,322" Orientation="Horizontal">
+            <Image x:Name="gpuStatus" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" />
+            <Label x:Name="gpuText" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="GPU: Checking" />
+        </StackPanel>
+        <StackPanel Margin="75,134,0,357" Orientation="Horizontal">
+            <Image x:Name="ramImage" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" />
+            <Label x:Name="memoryAmount" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="RAM: Checking" />
+        </StackPanel>
+        <Label Name="yourSpecsTitle" FontSize="20" FontFamily="Segoe UI Variable Display" Margin="0,50,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" >Your Specs:</Label>
+        <Label Name="Title" FontSize="26.667" FontFamily="Segoe UI Variable Display" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Padding="5,5,4,5" >Windows 11 Compatibility at a glance</Label>
+        <StackPanel Margin="75,99,0,392" Orientation="Horizontal">
+            <Image x:Name="cpuStatus" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" Margin="0" />
+            <Label x:Name="cpuName" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="CPU: Checking" />
+        </StackPanel>
+        <StackPanel Margin="75,234,0,256" Orientation="Horizontal">
+            <Image x:Name="storageImage" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" />
+            <Label x:Name="storageText" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Storage: Checking" />
+        </StackPanel>
+        <StackPanel Margin="75,267,0,223" Orientation="Horizontal">
+            <Image x:Name="biosModeStatus" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" />
+            <Label x:Name="biosModeText" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="BIOS Mode: Checking" />
+        </StackPanel>
+        <StackPanel Margin="75,300,0,190" Orientation="Horizontal">
+            <Image x:Name="secureBootStatus" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" />
+            <Label x:Name="secureBootText" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display " HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Secure Boot Status: Checking" />
+        </StackPanel>
+        <StackPanel Margin="75,333,0,157" Orientation="Horizontal">
+            <Image x:Name="tpmStatus" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" />
+            <Label x:Name="tpmText" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="TPM: Checking" />
+        </StackPanel>
+        <StackPanel Margin="75,365,0,125" Orientation="Horizontal">
+            <Image x:Name="screenResolutionStatus" HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="25" Source="/Resources/WindowsHelp (Custom).png" Stretch="None" />
+            <Label x:Name="screenResolutionText" Height="34" Width="586" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Screen Resolution: Checking" />
+        </StackPanel>
+        <StackPanel Margin="20,0,0,28" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Image x:Name="greenTick" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="25" Source="pack://application:,,,/Resources/WindowsSuccess (Custom).png" Stretch="None" Margin="0,7,0,0" />
+            <Label x:Name="greenTickText" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Meets soft requirements" />
+        </StackPanel>
+        <StackPanel Margin="250,0,0,28" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Image x:Name="warningIcon" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="25" Source="pack://application:,,,/Resources/WindowsWarning (Custom).png" Stretch="None" Margin="0,7,0,0" />
+            <Label x:Name="warningIconText" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="Meets hard requirements only" Width="238" />
+        </StackPanel>
+        <StackPanel Margin="523,0,0,28" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Image x:Name="errorIcon" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="25" Source="pack://application:,,,/Resources/WindowsCritical (Custom).png" Stretch="None" Margin="0,7,0,0" />
+            <Label x:Name="errorIconText" FontSize="17.333" FontFamily="Segoe UI Variable Display" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Does not meet" />
+        </StackPanel>
+        <Label Content="www.lucashuls.nl" HorizontalAlignment="Center" Margin="0,0,0,2" VerticalAlignment="Bottom" IsHitTestVisible="False" FontStyle="Italic" FontWeight="Bold" FontSize="16" Background="{x:Null}" Foreground="#FF002AB8"/>
+    </Grid>
+</Window>
